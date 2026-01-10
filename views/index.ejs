@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Joke Generator</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>😂 Random Joke Generator</h1>
+
+        <div class="card">
+            <% if (error) { %>
+                <p class="error-msg">
+                    <%= error %>
+                </p>
+                <% } else if (data) { %>
+
+                    <span class="category-badge">
+                        <%= data.category %>
+                    </span>
+
+                    <div class="joke-content">
+                        <% if (data.type==='single' ) { %>
+                            <p class="joke-text">"<%= data.joke %>"</p>
+                            <% } else if (data.type==='twopart' ) { %>
+                                <p class="joke-setup">
+                                    <%= data.setup %>
+                                </p>
+                                <p class="joke-delivery">... <%= data.delivery %> 🤣</p>
+                                <% } %>
+                    </div>
+
+                    <% } else { %>
+                        <p>Sedang memuat...</p>
+                        <% } %>
+        </div>
+
+        <a href="/" class="btn">Dapatkan Candaan Baru</a>
+    </div>
+
+</body>
+
+</html>
