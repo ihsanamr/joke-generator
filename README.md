@@ -7,7 +7,6 @@ A simple web application that fetches random jokes using the **JokeAPI**. Built 
 - Fetches random jokes (Single part or Two-part setup/delivery).
 - Clean and responsive User Interface.
 - Error handling for API requests.
-- "Safe Mode" enabled by default to filter out inappropriate content.
 
 ## 🛠️ Tech Stack
 
