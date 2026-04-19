@@ -59,5 +59,4 @@ Possible improvements for this project include:
 
 - Adding joke categories and filters
 - Adding a button for fetching new jokes without full page reload
-- Improving responsive design for mobile devices
 - Writing tests for routes and API integration
