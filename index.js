@@ -2,13 +2,16 @@ import express from "express";
 import axios from "axios";
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
+app.set("view engine", "ejs");
 app.use(express.static("public"));
 
 app.get("/", async (req, res) => {
   try {
-    const response = await axios.get("https://v2.jokeapi.dev/joke/Any");
+    const jokeApiUrl =
+      "https://v2.jokeapi.dev/joke/Any?safe-mode&blacklistFlags=nsfw,sexist,explicit";
+    const response = await axios.get(jokeApiUrl);
     const result = response.data;
     console.log(response.data);
 

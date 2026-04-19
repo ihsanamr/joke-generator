@@ -1,10 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f0f2f5;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 24px 16px;
     margin: 0;
     color: #333;
 }
@@ -32,6 +37,11 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.joke-content {
+    margin-top: 18px;
+    width: 100%;
 }
 
 .category-badge {
@@ -85,4 +95,51 @@ h1 {
 
 .error-msg {
     color: red;
+}
+
+@media (max-width: 600px) {
+    body {
+        align-items: center;
+        padding: 0 1rem 1rem;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+        margin-bottom: 16px;
+    }
+
+    .card {
+        padding: 22px 18px;
+        min-height: auto;
+        border-radius: 12px;
+    }
+
+    .category-badge {
+        top: 12px;
+        right: 12px;
+        font-size: 0.72rem;
+        padding: 4px 9px;
+    }
+
+    .joke-text {
+        font-size: 1.05rem;
+    }
+
+    .joke-setup {
+        font-size: 1rem;
+    }
+
+    .joke-delivery {
+        font-size: 1.1rem;
+    }
+
+    .btn {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 14px 18px;
+    }
 }
